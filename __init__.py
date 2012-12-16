@@ -129,11 +129,12 @@ class MainWindow(pyglet.window.Window):
 
 	def on_draw(self):
 		self.clear()
-		if (not self.drawFullImageB):
-			self.drawThumbnailSelector(self.thumbSelectorPos_)
-			self.drawThumbnails()
-		else:
-			self.drawMainScene()
+		if (self.imageCount_ > 0):
+			if (not self.drawFullImageB):
+				self.drawThumbnailSelector(self.thumbSelectorPos_)
+				self.drawThumbnails()
+			else:
+				self.drawMainScene()
 
 	def on_key_press(self, symbol, key):
 		if (symbol == pyglet.window.key.LEFT):
