@@ -153,7 +153,7 @@ class MainWindow(pyglet.window.Window):
 			pyglet.app.exit()
 
 	def on_mouse_press(self, x, y, button, modifiers):
-		if (button == mouse.LEFT):
+		if (button == pyglet.window.mouse.LEFT):
 			pass
 
 def main():
